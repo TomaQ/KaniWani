@@ -162,7 +162,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  angular-rails-templates
+  angular-rails-templates (= 0.1.4)
   byebug
   devise (= 3.5.1)
   jbuilder (~> 2.0)
