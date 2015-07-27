@@ -36,6 +36,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    angular-rails-templates (0.1.4)
+      railties (>= 3.1)
+      sprockets
+      tilt
     arel (6.0.2)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -158,6 +162,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angular-rails-templates
   byebug
   devise (= 3.5.1)
   jbuilder (~> 2.0)
