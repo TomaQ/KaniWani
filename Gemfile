@@ -7,6 +7,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'devise', '3.5.1'
 gem 'angular-rails-templates', '0.1.4'
+gem 'angular_rails_csrf', '1.0.4'
 
 group :development, :test do
   gem 'byebug'
