@@ -7,6 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="KaniWani">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
 
   <ui-view></ui-view>
 
