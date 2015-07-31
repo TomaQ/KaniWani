@@ -15,6 +15,6 @@ app.controller('AuthCtrl', [
         $state.go('home');
       });
     };
-
+    
   }
 ]);

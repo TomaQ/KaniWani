@@ -1,5 +1,13 @@
-app.controller('MainCtrl', ['$scope',
-  function($scope){
-    $scope.test = "Hello, peeps!";
+app.controller('MainCtrl', [
+  '$scope', 
+  'Auth',
+  function($scope, Auth){
+
+    $scope.signedIn = Auth.isAuthenticated;
+
+    Auth.currentUser().then(function (user){
+      $scope.user = user;
+    });
+
   }
 ]);
