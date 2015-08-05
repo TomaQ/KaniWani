@@ -11,6 +11,12 @@ app.config([
       controller: 'MainCtrl'
     });
 
+    $stateProvider.state('user', {
+      url: '/user',
+      templateUrl: 'assets/user/_user.html',
+      controller: 'UserCtrl'
+    });
+
     $stateProvider.state('login', {
       url: '/login',
       templateUrl: 'assets/auth/_login.html',

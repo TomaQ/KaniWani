@@ -13,8 +13,9 @@
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: "alert alert-info" %>
     <% end %>
-
-    <ui-view></ui-view>
+    <div class="jumbotron" style="margin-top: 50px;">
+      <ui-view></ui-view>
+    </div>
 
     <%= debug(params) if Rails.env.development? %>
 
