@@ -1,3 +1,4 @@
+<h2 style="text-align: center;">Hello {{ user.email }}</h2>
 <div class="row">
   <div class="col-md-6">
     <button class="btn btn-primary" type="submit" ng-click="updateWaniKaniInfo()">Update WaniKani Info</button>
@@ -6,9 +7,9 @@
     <form class="form-inline">
       <div class="form-group">
         <label for="apiKey">Api Key</label>
-        <input type="text" class="form-control" id="apiKey">
+        <input type="text" class="form-control" ng-model="api_key">
       </div>
-      <button type="submit" class="btn btn-default">Upate Key</button>
+      <button type="submit" class="btn btn-default" ng-click="updateApiKey(user)">Upate Key</button>
     </form>
   </div>
 </div>
