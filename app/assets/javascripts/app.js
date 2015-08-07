@@ -1,4 +1,4 @@
-var app = angular.module('KaniWani', ['ui.router', 'templates', 'Devise'])
+var app = angular.module('KaniWani', ['ui.router', 'templates', 'Devise', 'ngResource'])
 
 app.config([
   '$stateProvider',
