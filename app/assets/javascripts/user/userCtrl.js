@@ -11,7 +11,7 @@ app.controller('UserCtrl', [
     });
 
     $scope.update = function(){
-      User.update({id: $scope.user.id},{user: $scope.user},function(){
+      User.update({id: $scope.user.id},{api_key: $scope.api_key},function(){
       }, function(error) {
         console.log(error)
       });
