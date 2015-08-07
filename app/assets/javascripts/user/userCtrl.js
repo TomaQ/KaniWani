@@ -15,19 +15,11 @@ app.controller('UserCtrl', [
       }, function(error) {
         console.log(error)
       });
+      $scope.user.api_key = $scope.api_key
     };
 
     $scope.updateWaniKaniInfo = function(){
       alert('update?');
     };
-
-    $scope.updateApiKey = function(current_user){
-      /*return $http.put({
-        method: 'PUT',
-        url: '/users/' + current_user.id + '.json',
-        data: {"current_user.api_key": $scope.api_key}
-      });*/
-    };
-
    }
 ]);
