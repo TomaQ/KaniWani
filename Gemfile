@@ -8,6 +8,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise', '3.5.1'
 gem 'angular-rails-templates', '0.1.4'
 gem 'angular_rails_csrf', '1.0.4'
+gem 'httparty', '~> 0.13.5'
 
 group :development, :test do
   gem 'byebug'

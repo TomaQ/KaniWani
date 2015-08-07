@@ -3,8 +3,9 @@ app.controller('UserCtrl', [
    'Auth',
    '$http',
    'User',
+   'WaniKaniUser',
    '$resource',
-   function($scope, Auth, $http, User, $resource){
+   function($scope, Auth, $http, User, WaniKaniUser, $resource){
 
     Auth.currentUser().then(function (user){
       $scope.user = user;
@@ -20,7 +21,10 @@ app.controller('UserCtrl', [
     };
 
     $scope.updateWaniKaniInfo = function(){
-      alert('update?');
+      WaniKaniUser.update_wanikani_info({id: $scope.user.id}, function(){
+      }, function(error) {
+        console.log(error)
+      });
     };
    }
 ]);
