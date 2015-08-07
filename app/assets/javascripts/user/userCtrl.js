@@ -16,6 +16,7 @@ app.controller('UserCtrl', [
         console.log(error)
       });
       $scope.user.api_key = $scope.api_key
+      $scope.api_key = '';
     };
 
     $scope.updateWaniKaniInfo = function(){
