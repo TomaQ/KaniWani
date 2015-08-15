@@ -17,6 +17,12 @@ app.config([
       controller: 'UserCtrl'
     });
 
+    $stateProvider.state('review', {
+      url: '/review',
+      templateUrl: 'assets/review/_review.html',
+      controller: 'ReviewCtrl'
+    });
+
     $stateProvider.state('login', {
       url: '/login',
       templateUrl: 'assets/auth/_login.html',
