@@ -16,7 +16,14 @@ class UsersController < ApplicationController
     @user.update_attribute(:username, hash[:user_information][:username])
     @user.update_attribute(:gravatar, hash[:user_information][:gravatar])
     @user.update_attribute(:wanikani_level, hash[:user_information][:level])
-    @user.update_attribute(:wanikani_vocab, hash[:requested_information][:general])
+
+
+    vocab_hash = []
+    hash[:requested_information][:general].each do |x|
+      vocab_hash.push(x.select_keys(:character, :meaning, :level)) #extended method in Hash
+    end
+
+    @user.update_attribute(:wanikani_vocab, vocab_hash)
 
     render :status => 200, :json => {:status => "success", :user => @user, :message => "The user has been updated"}
   end
