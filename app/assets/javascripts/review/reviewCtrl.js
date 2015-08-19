@@ -10,7 +10,7 @@ app.controller('ReviewCtrl', [
     Auth.currentUser().then(function (user){
       $scope.user = user;
 
-      Review.query({id: $scope.user.id},function(value){
+      Review.get_review({id: $scope.user.id},function(value){
         $scope.review_words = value;
       });
 
