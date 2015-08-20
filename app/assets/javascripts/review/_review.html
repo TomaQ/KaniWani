@@ -1,5 +1,5 @@
-<p style="text-align: center;">Pretend I'm a word</p>
+<p style="text-align: center;">{{ chosen_word.meaning }}</p>
 <form ng-submit="submitReview()">
-  <input type="text" class="form-control" placeholder="Kanji" ng-model="review_data" style="margin:0 auto; width: 250px;text-align:center;">
+  <input type="text" class="form-control" placeholder="Kanji" ng-model="user_input" style="margin:0 auto; width: 250px;text-align:center;">
 </form>
 <p>{{ review_words }}</p>
