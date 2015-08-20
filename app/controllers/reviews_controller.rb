@@ -1,11 +1,14 @@
+require 'json'
+
 class ReviewsController < ApplicationController
 
   def get_reviews
     @user = User.find(params[:id])
 
-    review_words = random_select(@user.wanikani_vocab.split("},"), 5) #returns 5 random elements
+    review = JSON.parse(@user.wanikani_vocab)
+    review_words = random_select(review, 5) #returns 5 random elements
 
-    render :status => 200, :json => {review_words => review_words}
+    render :status => 200, :json => review_words
   end
 
   private

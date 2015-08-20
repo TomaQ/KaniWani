@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       vocab_hash.push(x.select_keys("character", "meaning", "level")) #extended method in Hash
     end
 
-    @user.update_attribute(:wanikani_vocab, vocab_hash)
+    @user.update_attribute(:wanikani_vocab, vocab_hash.to_json)
 
     render :status => 200, :json => {:status => "success", :user => @user, :message => "The user has been updated"}
   end
