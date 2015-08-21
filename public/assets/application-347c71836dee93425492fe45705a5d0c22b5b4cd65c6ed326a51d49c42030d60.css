@@ -3,3 +3,5 @@
 
 */
 
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap-sprockets";
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap";
