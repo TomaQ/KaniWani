@@ -1,0 +1,16 @@
+<h2 style="text-align: center;">Hello {{ user.username || user.email }}</h2>
+<p>Your WaniKani api key: {{ user.api_key }}</p>
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-primary" type="submit" ng-click="updateWaniKaniInfo()">Update WaniKani Info</button>
+  </div>
+  <div class="col-md-6">
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="apiKey">Api Key</label>
+        <input type="text" class="form-control" ng-model="api_key">
+      </div>
+      <button type="submit" class="btn btn-default" ng-click="update()">Upate Key</button>
+    </form>
+  </div>
+</div>
