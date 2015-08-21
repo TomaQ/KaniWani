@@ -1,1 +1,11 @@
-{"name":"KaniWani","version":"0.0.1","homepage":"https://github.com/TomaQ/KaniWani","authors":["Thomas \u003cthomasiscooly@gmail.com\u003e"],"description":"An English -\u003e Japanese learning web app.","license":"MIT","ignore":["**/.*","node_modules","bower_components","test","tests"],"dependencies":{"angular":"~1.4.3","angular-ui-router":"~0.2.15","bootstrap":"~3.3.5","angular-devise":"~1.1.0","angular-resource":"~1.4.3"}}
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "bootstrap-sass-official": "latest",
+    "angular-ui-router": "latest",
+    "angular-devise": "latest"
+  }
+}
