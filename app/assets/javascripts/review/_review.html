@@ -1,5 +1,5 @@
 <p style="text-align: center;">{{ chosen_word.meaning }}</p>
 <form ng-submit="submitReview()">
-  <input type="text" class="form-control" placeholder="Kanji" ng-model="user_input" style="margin:0 auto; width: 250px;text-align:center;">
+  <input type="text" class="form-control" placeholder="Kanji" ng-model="user_input" style="margin:0 auto; width: 250px;text-align:center;" id="review_input">
 </form>
-<p>{{ review_words }}</p>
+<p ng-show="show_word" style="text-align: center;">Correct kanji was {{ previous_word.character }}</p>
