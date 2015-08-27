@@ -8,6 +8,7 @@ app.controller('ReviewCtrl', [
     $scope.review_words;
     $scope.chosen_word;
     $scope.show_word = false;
+    $scope.attempts = 0;
 
     var correct_words = 0;
     var remaining_words; //words that are left in the review_set
@@ -24,6 +25,7 @@ app.controller('ReviewCtrl', [
     });
 
     $scope.submitReview = function(){
+      $scope.attempts += 1;
       getReviewSet();
     };
 
@@ -31,7 +33,7 @@ app.controller('ReviewCtrl', [
 
       if(checkWord($scope.chosen_word)){
         //$("#review_input").css({"background-color": "green"});
-        appendWordHash(true);
+        appendWordHash($scope.attempts);
 
         $scope.show_word = false;
         var index = remaining_words.indexOf($scope.chosen_word);
@@ -65,7 +67,7 @@ app.controller('ReviewCtrl', [
 
     function appendWordHash(value){
       index = $scope.review_words.indexOf($scope.chosen_word);
-      $scope.review_words[index]['correct'] = value;
+      $scope.review_words[index]['correct_attempts'] = value;
     }
     
   }
