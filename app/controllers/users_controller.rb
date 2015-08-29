@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def wanikani_info_update
-    @user = User.find(params[:id])
+    @user ||= User.find(params[:id])
 
     response = HTTParty.get("https://www.wanikani.com/api/v1.4/user/#{@user.api_key}/vocabulary")
     hash = JSON.parse response.to_json

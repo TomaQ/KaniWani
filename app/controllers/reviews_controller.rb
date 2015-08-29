@@ -11,6 +11,12 @@ class ReviewsController < ApplicationController
     render :status => 200, :json => review_words
   end
 
+  def set_reviews
+    puts params
+
+    render :status => 200, :json => {:status => "success", :message => "The review has been sent"}
+  end
+
   private
 
     def random_select(array, n)

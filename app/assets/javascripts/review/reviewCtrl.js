@@ -25,7 +25,7 @@ app.controller('ReviewCtrl', [
     });
 
     $scope.submitReview = function(){
-      $scope.attempts += 1;
+      appendWordHash($scope.attempts);
       getReviewSet();
     };
 
@@ -33,7 +33,6 @@ app.controller('ReviewCtrl', [
 
       if(checkWord($scope.chosen_word)){
         //$("#review_input").css({"background-color": "green"});
-        appendWordHash($scope.attempts);
 
         $scope.show_word = false;
         var index = remaining_words.indexOf($scope.chosen_word);
@@ -48,7 +47,14 @@ app.controller('ReviewCtrl', [
       $scope.chosen_word = remaining_words[Math.floor(Math.random()*remaining_words.length)];
       
       if(correct_words == 5){ //5 for now
+
         alert("You're done!");
+
+        Review.set_review({id: $scope.user.id, review_set: $scope.review_words}, function(){
+          }, function(error) {
+            console.log(error)
+          });
+
       }
     }
 
@@ -67,7 +73,13 @@ app.controller('ReviewCtrl', [
 
     function appendWordHash(value){
       index = $scope.review_words.indexOf($scope.chosen_word);
-      $scope.review_words[index]['correct_attempts'] = value;
+
+      if('correct_attempts' in $scope.review_words[index]) {
+        $scope.review_words[index]['correct_attempts'] += 1;
+      }
+      else {
+        $scope.review_words[index]['correct_attempts'] = 1;
+      }
     }
     
   }
