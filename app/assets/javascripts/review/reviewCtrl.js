@@ -25,7 +25,7 @@ app.controller('ReviewCtrl', [
 
     });
 
-    $scope.submitReview = function(){
+    $scope.submitReview = function(){ //refactor eventually
       var no_english = true;
       for(var i = 0; i < $scope.user_input.length; i++){
         if(english.test($scope.user_input[i])){
@@ -43,7 +43,7 @@ app.controller('ReviewCtrl', [
       }
     };
 
-    function getReviewSet(){
+    function getReviewSet(){ //refactor eventually
 
       if(checkWord($scope.chosen_word)){
         //$("#review_input").css({"background-color": "green"});
