@@ -3,7 +3,8 @@ var app = angular.module('KaniWani', ['ui.router', 'templates', 'Devise', 'ngRes
 app.config([
   '$stateProvider',
   '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider){
+  '$locationProvider',
+  function($stateProvider, $urlRouterProvider, $locationProvider){
 
     $stateProvider.state('home', {
       url: '/home',
@@ -46,5 +47,7 @@ app.config([
     });
 
     $urlRouterProvider.otherwise('home');
+
+    //$locationProvider.html5Mode({enabled: true, requireBase: false });
   }
 ]);

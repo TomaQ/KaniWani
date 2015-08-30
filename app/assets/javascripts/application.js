@@ -1,4 +1,5 @@
 //= require jquery
+//= require jquery-ui
 //= require angular
 //= require angular-resource/angular-resource
 //= require angular-rails-templates
