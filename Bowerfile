@@ -1,6 +1,6 @@
 asset 'angular'
 asset 'angular-route'
 asset 'angular-resource'
-asset 'bootstrap-sass-official'
 asset 'angular-ui-router'
 asset 'angular-devise'
+asset 'jquery-ui'

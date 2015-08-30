@@ -4,8 +4,8 @@
     "angular": "latest",
     "angular-route": "latest",
     "angular-resource": "latest",
-    "bootstrap-sass-official": "latest",
     "angular-ui-router": "latest",
-    "angular-devise": "latest"
+    "angular-devise": "latest",
+    "jquery-ui": "latest"
   }
 }

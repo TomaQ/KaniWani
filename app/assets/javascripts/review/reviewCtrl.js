@@ -12,6 +12,7 @@ app.controller('ReviewCtrl', [
 
     var correct_words = 0;
     var remaining_words; //words that are left in the review_set
+    var english = /^[A-Za-z0-9]*$/;
 
     Auth.currentUser().then(function (user){
       $scope.user = user;
@@ -25,8 +26,21 @@ app.controller('ReviewCtrl', [
     });
 
     $scope.submitReview = function(){
-      appendWordHash($scope.attempts);
-      getReviewSet();
+      var no_english = true;
+      for(var i = 0; i < $scope.user_input.length; i++){
+        if(english.test($scope.user_input[i])){
+          no_english = false;
+          break;
+        }
+      }
+
+      if(no_english) {
+        appendWordHash($scope.attempts);
+        getReviewSet();
+      }
+      else{
+        $("#shake").effect("shake");
+      }
     };
 
     function getReviewSet(){
